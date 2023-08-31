@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <!-- First element: TextView to display the date -->
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's Date"
+        android:textSize="34sp" />
+
+    <!-- Second element: Row of three buttons -->
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/toggle_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#18D60B"
+                android:textOff="LOW"
+                android:textOn="LOW" />
+
+            <ToggleButton
+                android:id="@+id/toggle_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFC801"
+                android:textOff="MEDIUM"
+                android:textOn="MEDIUM" />
+
+            <ToggleButton
+                android:id="@+id/toggle_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0303"
+                android:textOff="HIGH"
+                android:textOn="HIGH" />
+
+            <!-- Add as many toggle buttons as needed -->
+
+        </RadioGroup>
+
+
+
+    <!-- Third element: TextEdit for user input -->
+    <TextView
+        android:id="@+id/dateTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="14sp" />
+    <EditText
+        android:id="@+id/taskNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text here" />
+
+    <TextView
+        android:id="@+id/dateTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time period"
+        android:textSize="14sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/taskDateInput"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Start time" />
+
+        <EditText
+            android:id="@+id/taskDateInput1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="End time" />
+    </LinearLayout>
+
+    <!-- Rest of the screen: Big TextEdit for user input -->
+    <EditText
+        android:id="@+id/taskDescriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Enter description here" />
+
+    <!-- Bottom row: Save and Cancel buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/createTaskBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>
